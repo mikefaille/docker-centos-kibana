@@ -6,7 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV KIBANA_VERSION 4.0.2
 ENV ELASTICSEARCH_URL http://elasticsearch:9200
 
-RUN curl -sLo /tmp/kibana-${KIBANA_VERSION}-linux-x64.tar.gz https://download.elastic.co/kibana/kibana/kibana-${KIBANA_VERSION}-linux-x64.tar.gz && \
+RUN yum install tar && yum clean && \
+    curl -sLo /tmp/kibana-${KIBANA_VERSION}-linux-x64.tar.gz https://download.elastic.co/kibana/kibana/kibana-${KIBANA_VERSION}-linux-x64.tar.gz && \
     tar xf /tmp/kibana-${KIBANA_VERSION}-linux-x64.tar.gz -C /opt
 
 
