@@ -11,4 +11,4 @@ run echo "pub  4096R/F4A80EB5 2014-06-23 CentOS-7 Key (CentOS 7 Official Signing
     tar xf /tmp/kibana-${KIBANA_VERSION}-linux-x64.tar.gz -C /opt
 
 
-CMD /opt/kibana-${KIBANA_VERSION}-linux-x64/bin/kibana -q -e ${ELASTICSEARCH_URL}
+CMD echo "Starting Kibana ..." && /opt/kibana-${KIBANA_VERSION}-linux-x64/bin/kibana -q -e ${ELASTICSEARCH_URL}
